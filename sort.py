@@ -8,6 +8,7 @@
     age should be sorted alphabetically (lexicographically).
 '''
 
+
 def merge(arr, l_idx, m_idx, r_idx):
     """
     Doing the merging of the two subarrays in the mergesort algorithm
@@ -71,6 +72,8 @@ def merge_sort(arr, left, right):
     :param arr: The array that is being sorted
     :param left: The left index of the array
     :param right: The right index of the array
+
+    :return arr: Returning the sorted array
     """
     # Checking if the left index is less than the right index
     if left < right:
@@ -81,3 +84,14 @@ def merge_sort(arr, left, right):
         merge_sort(arr, mid + 1, right)
         # Calling the merge function to merge the sorted subarrays
         merge(arr, left, mid, right)
+
+    # Returning the sorted array
+    return arr
+
+
+if __name__ == "__main__":
+    test1 = [645.41, 37.59, 76.41, 5.31, -34.23, 1.11,
+             1.10, 23.46, 635.47, -876.32, 467.83, 62.25]
+    print("Original sequence: ", test1)
+    sorted_seq1 = merge_sort(test1, 0, len(test1) - 1)
+    print("Sorted sequence: ", sorted_seq1)
