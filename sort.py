@@ -89,9 +89,25 @@ def merge_sort(arr, left, right):
     return arr
 
 
+# Running the main function to call functions and apply test cases on them
 if __name__ == "__main__":
-    test1 = [645.41, 37.59, 76.41, 5.31, -34.23, 1.11,
-             1.10, 23.46, 635.47, -876.32, 467.83, 62.25]
+    # Checking to sort numbers
+    test1 = [645, 37, 76, 5, -34, 1,
+             0, 23, 635, -876, 467, 62]
     print("Original sequence: ", test1)
     sorted_seq1 = merge_sort(test1, 0, len(test1) - 1)
     print("Sorted sequence: ", sorted_seq1)
+
+    # Checking to sort decimals
+    test2 = [645.41, 37.59, 76.41, 5.31, -34.23, 1.11,
+             1.10, 23.46, 635.47, -876.32, 467.83, 62.25]
+    print("\nOriginal sequence: ", test2)
+    sorted_seq2 = merge_sort(test2, 0, len(test2) - 1)
+    print("Sorted sequence: ", sorted_seq2)
+
+    # Checking to sort strings
+    test3 = ["Hal", "Susann", "Dwight", "Kassandra", "Lawrence", "Cindy", "Cory", "Mac",
+             "Romana", "Doretha", "Danna", "Zara", "Rosalyn", "Risa", "Benny", "Juan", "Natalie"]
+    print("\nOriginal sequence: ", test3)
+    sorted_seq3 = merge_sort(test3, 0, len(test3) - 1)
+    print("Sorted sequence: ", sorted_seq3)
