@@ -8,9 +8,6 @@
     age should be sorted alphabetically (lexicographically).
 '''
 
-# Writing my sorting algorithm(mergesort) first
-
-
 def merge(arr, l_idx, m_idx, r_idx):
     """
     Doing the merging of the two subarrays in the mergesort algorithm
