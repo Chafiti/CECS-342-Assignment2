@@ -6,6 +6,7 @@
     - sort people descending by age, where people of the same age should be sorted alphabetically (lexicographically).
 -}
 
+-- Importing a function to sort
 import Data.List (sortBy)
 
 data Person = Person { name :: String, age :: Int } deriving (Show, Eq, Ord)
